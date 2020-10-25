@@ -7,6 +7,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 
+import { HueApiService } from './services/hue-api/hue-api.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,7 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     FormsModule
   ],
-  providers: [],
+  providers: [HueApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

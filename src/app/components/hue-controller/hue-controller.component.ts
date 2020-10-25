@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HueApiService } from '../../services/hue-api/hue-api.service'
 
 @Component({
   selector: 'app-hue-controller',
@@ -10,7 +11,7 @@ export class HueControllerComponent implements OnInit {
   public bridgeIP: string = '';
   public debugText: string = '';
 
-  constructor() { }
+  constructor(private hueAPI: HueApiService) { }
 
   ngOnInit(): void {
 
@@ -19,6 +20,8 @@ export class HueControllerComponent implements OnInit {
   }
 
   public test(): void {
+
+    this.hueAPI.testService();
 
     this.writeToDebug('hi');
 
