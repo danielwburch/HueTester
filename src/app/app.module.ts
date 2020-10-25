@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { HueControllerComponent } from './components/hue-controller/hue-controller.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,7 +22,8 @@ import { HueApiService } from './services/hue-api/hue-api.service';
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [HueApiService],
   bootstrap: [AppComponent]

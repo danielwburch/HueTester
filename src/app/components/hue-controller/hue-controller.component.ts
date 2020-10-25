@@ -9,6 +9,7 @@ import { HueApiService } from '../../services/hue-api/hue-api.service'
 export class HueControllerComponent implements OnInit {
 
   public bridgeIP: string = '';
+  public username: string = '';
   public debugText: string = '';
 
   constructor(private hueAPI: HueApiService) { }
@@ -19,11 +20,9 @@ export class HueControllerComponent implements OnInit {
 
   }
 
-  public test(): void {
+  public async test(): Promise<void> {
 
-    this.hueAPI.testService();
-
-    this.writeToDebug('hi');
+    this.writeToDebug(await this.hueAPI.NewUser(this.bridgeIP));
 
   }
 
