@@ -1,11 +1,11 @@
 export class State {
   on: boolean;
-  bri: number;
+  brightness: number;
   hue: number;
-  sat: number;
+  saturation: number;
   effect: string;
   xy: number[];
-  ct: number;
+  colorTemperature: number;
   alert: string;
   colorMode: string;
   mode: string;

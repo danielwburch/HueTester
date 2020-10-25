@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule, MatIcon } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 
 import { HueApiService } from './services/hue-api/hue-api.service';
@@ -26,6 +27,7 @@ import { LightCardComponent } from './components/light-card/light-card.component
     MatButtonModule,
     MatInputModule,
     MatCardModule,
+    MatIconModule,
     FormsModule,
     HttpClientModule
   ],

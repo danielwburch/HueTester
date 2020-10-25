@@ -1,9 +1,38 @@
 .card {
   max-width: 400px;
+  margin: 15px;
 
-  .light-color{
-      width: 100%;
-      height: 150px;
-      background-color: red;
+  .light-color {
+    background-color: red;
+    background-size: cover;
   }
+
+  .light-button-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .light-button {
+
+      .light-button-icon {
+        transform: scale(3);
+      }
+    }
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.on-state {
+  color: #e6e5e5;
+}
+
+.off-state {
+  color: #312c2c;
 }

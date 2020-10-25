@@ -60,12 +60,12 @@ export class HueApiService {
             const newState: State = new State();
 
             newState.on = result[light]['state']['on'];
-            newState.bri = result[light]['state']['bri'];
+            newState.brightness = result[light]['state']['bri'];
             newState.hue = result[light]['state']['hue'];
-            newState.sat = result[light]['state']['sat'];
+            newState.saturation = result[light]['state']['sat'];
             newState.effect = result[light]['state']['effect'];
             newState.xy = result[light]['state']['xy'];
-            newState.ct = result[light]['state']['ct'];
+            newState.colorTemperature = result[light]['state']['ct'];
             newState.alert = result[light]['state']['alert'];
             newState.colorMode = result[light]['state']['colormode'];
             newState.mode = result[light]['state']['mode'];
