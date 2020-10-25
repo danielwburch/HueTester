@@ -12,4 +12,10 @@ export class HueControllerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public test(): void {
+
+    console.log('hi');
+
+  }
+
 }
