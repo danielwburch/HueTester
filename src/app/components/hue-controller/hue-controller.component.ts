@@ -7,14 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HueControllerComponent implements OnInit {
 
+  public bridgeIP: string = '';
+  public debugText: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
+
+    this.bridgeIP = '192.168.0.130';
+
   }
 
   public test(): void {
 
-    console.log('hi');
+    this.writeToDebug('hi');
+
+  }
+
+  public writeToDebug(text: string): void {
+
+    this.debugText += '\r\n' + text;
 
   }
 

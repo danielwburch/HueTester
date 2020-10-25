@@ -1,1 +1,29 @@
-<button (click)="test()">Test button</button>
+<div class="content">
+
+  <div class="buttons">
+
+    <button (click)="test()"
+            mat-button color="primary">
+      Generate User
+    </button>
+
+    <button (click)="test()"
+            mat-button color="primary">
+      Test Button 2
+    </button>
+
+    <button (click)="test()"
+            mat-button color="primary">
+      Test Button 3
+    </button>
+
+  </div>
+
+  <mat-form-field>
+    <mat-label>IP Addr. of Bridge:</mat-label>
+    <input matInput type="text" [(ngModel)]="bridgeIP">
+  </mat-form-field>
+
+  <textarea rows="30" cols="100">{{ debugText }}</textarea>
+
+</div>
