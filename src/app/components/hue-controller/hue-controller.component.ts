@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HueApiService } from '../../services/hue-api/hue-api.service'
 import { Light } from '../../models/light'
+import { State } from '../../models/state'
 
 @Component({
   selector: 'app-hue-controller',
@@ -25,6 +26,14 @@ export class HueControllerComponent implements OnInit {
   public async NewUser(): Promise<void> {
 
     this.writeToDebug(await this.hueAPI.NewUser(this.bridgeIP));
+
+  }
+
+  public async ChangeState(): Promise<void> {
+
+    let state: State = this.lights[0].state;
+
+    this.writeToDebug(await this.hueAPI.ChangeState(this.bridgeIP, 's1VXTcqyG5qlHORW04F8M8bZ-KYTTDOUkI0FC9TK', '1', state));
 
   }
 
