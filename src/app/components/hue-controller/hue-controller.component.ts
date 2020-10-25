@@ -32,6 +32,8 @@ export class HueControllerComponent implements OnInit {
 
     this.lights = await this.hueAPI.GetLights(this.bridgeIP, 's1VXTcqyG5qlHORW04F8M8bZ-KYTTDOUkI0FC9TK');
 
+    console.log(this.lights)
+
   }
 
   public writeToDebug(text: string): void {

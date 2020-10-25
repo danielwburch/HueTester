@@ -7,21 +7,25 @@ import { HueControllerComponent } from './components/hue-controller/hue-controll
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 
 import { HueApiService } from './services/hue-api/hue-api.service';
+import { LightCardComponent } from './components/light-card/light-card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HueControllerComponent
+    HueControllerComponent,
+    LightCardComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
+    MatCardModule,
     FormsModule,
     HttpClientModule
   ],

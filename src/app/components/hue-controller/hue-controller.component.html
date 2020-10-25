@@ -12,7 +12,7 @@
       Get All Lights
     </button>
 
-    <button (click)="test()"
+    <button (click)="NewUser()"
             mat-button color="primary">
       Test Button 3
     </button>
@@ -23,6 +23,12 @@
     <mat-label>IP Addr. of Bridge:</mat-label>
     <input matInput type="text" [(ngModel)]="bridgeIP">
   </mat-form-field>
+
+  <div class="light-cards">
+
+    <app-light-card *ngFor="let light of lights" [light]="light"></app-light-card>
+
+  </div>
 
   <textarea rows="30" cols="100">{{ debugText }}</textarea>
 

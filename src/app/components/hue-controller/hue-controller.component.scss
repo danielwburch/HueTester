@@ -1,9 +1,14 @@
-.content{
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .buttons {
+  }
+
+  .light-cards {
     display: flex;
     align-items: center;
-    flex-direction: column;
-
-    .buttons{
-
-    }
+    flex-direction: row;
+  }
 }
