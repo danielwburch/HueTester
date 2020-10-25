@@ -92,10 +92,19 @@ export class HueApiService {
   public async ChangeState(bridgeIP: string, username: string, lightId: string, state: State): Promise<string> {
 
     let retval: string = '';
+    let body;
 
     try {
 
-      const body = '{ "on":' + !state.on + ' , "transitiontime" : 0}';
+      if (!state.on) {
+
+        body = '{ "on":' + state.on + ' , "transitiontime" : 0}';
+
+      } else {
+
+        body = '{ "on":' + state.on + ' , "bri" : ' + state.brightness + ', "transitiontime" : 0}';
+
+      }
 
       await this.httpClient.put<string>('http://' + bridgeIP + '/api/' + username + "/lights/" + lightId + "/state", body)
         .toPromise()

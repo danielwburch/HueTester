@@ -10,4 +10,5 @@ export class State {
   colorMode: string;
   mode: string;
   reachable: boolean;
+
 }
